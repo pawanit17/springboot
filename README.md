@@ -35,17 +35,19 @@ The below piece of code lets us launch the bare minimum springboot application.
        a. Sets up default configuration.
        b. Starts Spring Application context
        c. Performs class path scan ( annotations @Service, @Controller )
-       d. Starts Tomcat server - this comes with SpringBoot.
+       d. Starts Tomcat server - this comes with SpringBoot. 
+ 
+```java
+package io.bubblesort.springbootstarter;
 
-	package io.bubblesort.springbootstarter;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-	import org.springframework.boot.SpringApplication;
-	import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class CourseApiApp {
 
-	@SpringBootApplication
-	public class CourseApiApp {
-
-		public static void main(String[] args) {
-			SpringApplication.run( CourseApiApp.class, args);
-		}
+	public static void main(String[] args) {
+		SpringApplication.run( CourseApiApp.class, args);
 	}
+}
+```
