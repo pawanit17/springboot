@@ -75,4 +75,8 @@ public class HelloController {
 }
 ```
 
+```javascript
+["Java","is","awesome"]
+```
+
 Notice that the conversion from Java world to JSON happens implicitly and is taken care of by Spring framework.
