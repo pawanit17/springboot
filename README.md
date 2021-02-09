@@ -86,3 +86,11 @@ Notice that the conversion from Java world to JSON happens implicitly and is tak
 `SpringApplication.run()` runs the Tomcat servlet container. This is done programmatically and the relevant Tomcat jar files are loaded into the project via the Maven repository.
 
 ![Maven Configuration](spring-auto-configuration.png)
+
+Having Tomcat server embedded has the following advantages:
+1. Convenience
+2. Standalone application
+3. Useful for Microservices architecture - no additional steps needed to configure multiple Microservices instances.
+4. Servlet container is now part of Application itself and can be configured via Application configuration itself.
+
+
