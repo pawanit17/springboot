@@ -12,18 +12,40 @@ These steps are abstracted via Sprint Boot.
 
 Spring applications are typically managed by Maven. You can just create a Maven project and add the following parent/dependency.
 
-  `<parent>
+  <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>2.1.2.RELEASE</version>
 	<relativePath/>
-   </parent>`
+   </parent>
 
-   `<dependencies>
+   <dependencies>
 	<dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
 	</dependency>
-    </dependencies>`
+    </dependencies>
 
 The `<parent>` section inherits the configurations defined in that Maven project onto the current project and the `<dependency>` section describes the dependencies needed for the current project to be build successfully.
+
+The below piece of code lets us launch the bare minimum springboot application.
+1. @SpringBootApplication tells Spring that this class is the SpringBoot Application.
+2. Recall that SpringBoot helps in building standalone applications - hence the main method.
+3. SpringApplication.run() - 
+       a. Sets up default configuration.
+       b. Starts Spring Application context
+       c. Performs class path scan ( annotations @Service, @Controller )
+       d. Starts Tomcat server - this comes with SpringBoot.
+
+	package io.bubblesort.springbootstarter;
+
+	import org.springframework.boot.SpringApplication;
+	import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+	@SpringBootApplication
+	public class CourseApiApp {
+
+		public static void main(String[] args) {
+			SpringApplication.run( CourseApiApp.class, args);
+		}
+	}
