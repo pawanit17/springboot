@@ -80,3 +80,9 @@ public class HelloController {
 ```
 
 Notice that the conversion from Java world to JSON happens implicitly and is taken care of by Spring framework.
+
+# Maven Configuration
+
+`SpringApplication.run()` runs the Tomcat servlet container. This is done programmatically and the relevant Tomcat jar files are loaded into the project via the Maven repository.
+
+![Maven Configuration](spring-auto-configuration.png)
