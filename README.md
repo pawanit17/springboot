@@ -13,17 +13,17 @@ These steps are abstracted via Sprint Boot.
 Spring applications are typically managed by Maven. You can just create a Maven project and add the following parent/dependency.
 
   `<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>2.1.2.RELEASE</version>
+	<relativePath/>
+   </parent>`
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-  </dependencies>`
+   `<dependencies>
+	<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+    </dependencies>`
 
 The `<parent>` section inherits the configurations defined in that Maven project onto the current project and the `<dependency>` section describes the dependencies needed for the current project to be build successfully.
