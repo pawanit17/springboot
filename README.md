@@ -2,7 +2,7 @@
 Spring is a huge framework used for creating standalone Spring based applications easily. Spring is an application framework - that does the handling of Http requests, connections to databases ( RDBMS, MongoDB ), running queries etc. Sprint Boot is like a wrapper on top of it so that the setting of Spring project, working and managing its dependencies are easy. This is extremely useful because most projects have some commonalities like connecting to databases, etc. So having this supplied by default via the Spring application using Bootstrap is what Spring Boot does.
 
 # Problems with Spring
-1. Huge framework
+1. Huge framework that can be too much for a beginner.
 2. Lot of steps involved in setting up a project
 3. Configuration steps
 4. Multiple build and deploy steps
@@ -51,3 +51,28 @@ public class CourseApiApp {
 	}
 }
 ```
+
+# URL Mappings and Controllers
+
+@RequestMapping determines which URL is going to hit which method of the class. This mainly works for GET requests by default.
+
+```java
+package io.bubblesort.springbootstarter.hello;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+	
+	@RequestMapping("/hello")
+	public List<String> sayHi() {
+		return Arrays.asList( new String[] { "Java", "is", "awesome" } );
+	}
+}
+```
+
+Notice that the conversion from Java world to JSON happens implicitly and is taken care of by Spring framework.
