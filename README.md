@@ -127,6 +127,13 @@ Having Tomcat server embedded has the following advantages:
 @RestController
 @RequestMapping("/topics")
 
+# Application.properties
+- A configuration point for a Spring application.
+- Ex: 
+  - server.port=3000
+  - spring.data.cassandra.username
+  - spring.data.cassandra.password 
+- What all properties are available for configuration is provided at: https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
 
 # Examples
 - The below code depicts a RestController that maps /topics URI to getAllTopics() method.
