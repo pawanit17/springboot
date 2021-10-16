@@ -135,9 +135,14 @@ Having Tomcat server embedded has the following advantages:
   - spring.data.cassandra.password 
 - What all properties are available for configuration is provided at: https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
 
+# Spring MVC Controller
+- ![image](https://user-images.githubusercontent.com/42272776/137579022-040ca0de-6d6a-4992-8165-7cc9bc88bceb.png)
+
+
+
 # Examples
 - The below code depicts a RestController that maps /topics URI to getAllTopics() method.
-- The return value of that method gets serialzied into JSON content.
+- The return value of that method gets serialzied into JSON content. This is handled for us by SpringMVC.
 
 ```
 package io.firehose.springbootstarter.io.firehose.springbootstarter.topic;
