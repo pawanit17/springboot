@@ -33,6 +33,7 @@
 - GraphQL With SpringBoot https://wipro.udemy.com/course/graphql-with-spring-boot-foundation-1/
 - OAuth2 in SpringBoot https://wipro.udemy.com/course/oauth2-in-spring-boot-applications/ 
 - RESTful Web Services in Spring https://wipro.udemy.com/course/restful-web-services-with-spring-framework-a-quick-start/
+- SpringBoot Kafka ElasticSearch https://wipro.udemy.com/course/event-driven-microservices-spring-boot-kafka-and-elasticsearch/
 
 
 
