@@ -236,5 +236,6 @@ public class TopicController
 }
 ```
 
+
 # Database Connections
 - JPA is Java Persistance Architecture, which is a specification. Spring Data JPA is the Spring implementation of the same.
