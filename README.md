@@ -185,6 +185,7 @@ public class TopicController
   - Create API calls and map them to URIs using **@RequestMapping** annotations
   - Business services can be created to hold the singleton data using **@Service** and can be used in the controller methods.
   - **@Autowired** helps in populating the object in StringBoot application with the singleton instance.
+
 ## CRUD API
 ```
 package io.firehose.springbootstarter.controllers;
