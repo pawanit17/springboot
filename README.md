@@ -17,19 +17,21 @@ These steps are abstracted via Sprint Boot.
 
 Spring applications are typically managed by Maven. You can just create a Maven project and add the following parent/dependency.
 
-```<parent>
+```
+<parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>2.1.2.RELEASE</version>
 	<relativePath/>
-   </parent>
+</parent>
 
-   <dependencies>
+<dependencies>
 	<dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-web</artifactId>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
 	</dependency>
-    </dependencies>```
+</dependencies>
+```
 
 The `<parent>` section inherits the configurations defined in that Maven project onto the current project and the `<dependency>` section describes the dependencies needed for the current project to be build successfully. In this case, it adds the Web related capabilities to the Spring project. **In other words, the dependencies section tells which jars etc are needed and the parent section tells which versions of those jars are going to be used.** This preset configuration is referred to as Spring **Bill of Materials**.
 
@@ -56,10 +58,13 @@ public class CourseApiApp {
 	}
 }
 ```
+- SpringApplication.run, runs the servlet container.
+- Servlet Container, i.e., Tomcat, comes along with SpringBoot application to make the development easy. This makes building MicroServices with SpringBoot faster.
+- The arguments on the command line are passed onto the SpringApplication static method.
 
 # URL Mappings and Controllers
 
-@RequestMapping determines which URL is going to hit which method of the class. This mainly works for GET requests by default.
+```@RequestMapping``` determines which URL is going to hit which method of the class. This mainly works for GET requests by default.
 
 ```java
 package io.bubblesort.springbootstarter.hello;
@@ -83,8 +88,8 @@ public class HelloController {
 ```javascript
 ["Java","is","awesome"]
 ```
-
-Notice that the conversion from Java world to JSON happens implicitly and is taken care of by Spring framework.
+- The above code creates a RESTController that maps requests to /hello onto the sayHi() method.
+- Notice that the conversion from Java world to JSON happens implicitly and is taken care of by Spring framework.
 
 # Maven Configuration
 
