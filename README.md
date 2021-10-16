@@ -177,3 +177,11 @@ public class TopicController
 ```
 [{"id":"Spring","name":"Spring Framework","description":"Stable Microservices"},{"id":"Cassandra","name":"Distributed Database","description":"Highavailable Fast Database"},{"id":"Redis","name":"Caching Service","description":"Performance Booster"}]
 ```
+
+# SpringBoot REST API
+- You start by creating a Spring project.
+  - So there would be a class annotated by **@SpringApplication**
+- 	
+
+# Database Connections
+- JPA is Java Persistance Architecture, which is a specification. Spring Data JPA is the Spring implementation of the same.
