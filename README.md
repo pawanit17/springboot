@@ -6,6 +6,16 @@
 - This is extremely useful because most projects have some commonalities like connecting to databases, etc.
 - So having this supplied by default via the Spring application using Bootstrap is what Spring Boot does.
 
+# Questions
+- Application Context
+- Classpath Scan
+  - Finds annotations and registers them 
+- Configuration / Auto Configuration
+- Spring Database connections
+- Controller vs Rest Controller
+- Dependency Injection
+- Inversion of Control
+
 # Problems with Spring
 1. Huge framework that can be too much for a beginner.
 2. Lot of steps involved in setting up a project
@@ -103,4 +113,42 @@ Having Tomcat server embedded has the following advantages:
 3. Useful for Microservices architecture - no additional steps needed to configure multiple Microservices instances.
 4. Servlet container is now part of Application itself and can be configured via Application configuration itself.
 
+# Annotations
 
+@SpringBootApplication
+@RestController
+@RequestMapping("/topics")
+
+
+# Examples
+- The below code depicts a RestController that maps /topics URI to getAllTopics() method.
+- The return value of that method gets serialzied into JSON content.
+
+```
+package io.firehose.springbootstarter.io.firehose.springbootstarter.topic;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
+import java.util.List;
+
+@RestController
+public class TopicController
+{
+    @RequestMapping("/topics")
+    public List<Topic> getAllTopics()
+    {
+        return Arrays.asList(
+                new Topic("Spring", "Spring Framework", "Stable Microservices"),
+                new Topic("Cassandra", "Distributed Database", "Highavailable Fast Database"),
+                new Topic("Redis", "Caching Service", "Performance Booster")
+        );
+    }
+}
+```
+
+- When localhost:8080/topics is hit, the result would be that this getAllTopics would be hit and its response would be marked as the return JSON.
+```
+[{"id":"Spring","name":"Spring Framework","description":"Stable Microservices"},{"id":"Cassandra","name":"Distributed Database","description":"Highavailable Fast Database"},{"id":"Redis","name":"Caching Service","description":"Performance Booster"}]
+```
