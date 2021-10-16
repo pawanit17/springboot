@@ -132,13 +132,18 @@ Having Tomcat server embedded has the following advantages:
 - Ex: 
   - server.port=3000
   - spring.data.cassandra.username
-  - spring.data.cassandra.password 
+  - spring.data.cassandra.password
+  - management.port=9001
 - What all properties are available for configuration is provided at: https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
 
 # Spring MVC Controller
 - ![image](https://user-images.githubusercontent.com/42272776/137579022-040ca0de-6d6a-4992-8165-7cc9bc88bceb.png)
 
+# SpringBoot Actuator
+- Comes in Operations category that has features to give statistics on how the application is running - health, utilization etc.
+- https://spring.io/guides/gs/actuator-service/
 
+# 
 
 # Examples
 - The below code depicts a RestController that maps /topics URI to getAllTopics() method.
