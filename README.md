@@ -15,6 +15,13 @@
 - Controller vs Rest Controller
 - Dependency Injection
 - Inversion of Control
+- What to do if someone needs XML instead of JSON output?.
+- Where does GraphQL fit in?.
+- Integration with Cassandra
+- Integration with Thymeleaf
+- Integration with a sample Angular or VanillaJS application
+- Integration with Redit
+- SpringBoot Microservices
 
 # Problems with Spring
 1. Huge framework that can be too much for a beginner.
