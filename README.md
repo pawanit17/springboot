@@ -185,7 +185,32 @@ public class TopicController
   - Create API calls and map them to URIs using **@RequestMapping** annotations
   - Business services can be created to hold the singleton data using **@Service** and can be used in the controller methods.
   - **@Autowired** helps in populating the object in StringBoot application with the singleton instance.
-- 	
+## CRUD API
+```
+    @RequestMapping("/topics/{id}")
+    public Topic getTopic(@PathVariable String id)
+    {
+        return topicService.getTopic(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value="/topics")
+    public void addTopic(@RequestBody Topic topic)
+    {
+        topicService.addTopic(topic);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, value="/topics/{id}")
+    public void updateTopic(@RequestBody Topic topic, @PathVariable String id)
+    {
+        topicService.updateTopic(id, topic);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value="/topics/{id}")
+    public void deleteTopic(@PathVariable String id)
+    {
+        topicService.deleteTopic(id);
+    }
+```
 
 # Database Connections
 - JPA is Java Persistance Architecture, which is a specification. Spring Data JPA is the Spring implementation of the same.
