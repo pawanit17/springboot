@@ -50,7 +50,8 @@ Spring applications are typically managed by Maven. You can just create a Maven 
 </dependencies>
 ```
 
-The `<parent>` section inherits the configurations defined in that Maven project onto the current project and the `<dependency>` section describes the dependencies needed for the current project to be build successfully. In this case, it adds the Web related capabilities to the Spring project. **In other words, the dependencies section tells which jars etc are needed and the parent section tells which versions of those jars are going to be used.** This preset configuration is referred to as Spring **Bill of Materials**.
+- The `<parent>` section inherits the configurations defined in that Maven project onto the current project and the `<dependency>` section describes the dependencies needed for the current project to be build successfully. In this case, it adds the Web related capabilities to the Spring project. **In other words, the dependencies section tells which jars etc are needed and the parent section tells which versions of those jars are going to be used.** This preset configuration is referred to as Spring **Bill of Materials**.
+- The advantage of this preset is that it will determine what all combinations work well together. So as a developer you need not worry if the combinations of jars work well together or not.
 
 The below piece of code lets us launch the bare minimum springboot application.
 1. @SpringBootApplication tells Spring that this class is the SpringBoot Application.
