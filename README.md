@@ -23,6 +23,19 @@
 - Integration with Redit
 - SpringBoot Microservices
 
+# Resources
+- https://www.javabrains.io/courses/take/springboot-quickstart/multimedia/2775600-introduction
+- https://wipro.udemy.com/course/master-microservices-with-spring-docker-kubernetes/
+
+# TODO:
+- https://wipro.udemy.com/course/master-microservices-with-spring-docker-kubernetes/
+- https://wipro.udemy.com/course/microservices-with-java-spring-boot-spring-cloud-eureka-api-gateway/
+- GraphQL With SpringBoot https://wipro.udemy.com/course/graphql-with-spring-boot-foundation-1/
+- OAuth2 in SpringBoot https://wipro.udemy.com/course/oauth2-in-spring-boot-applications/ 
+- RESTful Web Services in Spring https://wipro.udemy.com/course/restful-web-services-with-spring-framework-a-quick-start/
+
+
+
 # Problems with Spring
 1. Huge framework that can be too much for a beginner.
 2. Lot of steps involved in setting up a project
