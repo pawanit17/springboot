@@ -187,6 +187,27 @@ public class TopicController
   - **@Autowired** helps in populating the object in StringBoot application with the singleton instance.
 ## CRUD API
 ```
+package io.firehose.springbootstarter.controllers;
+
+import io.firehose.springbootstarter.topic.Topic;
+import io.firehose.springbootstarter.services.TopicService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class TopicController
+{
+    @Autowired
+    private TopicService topicService;
+
+    @RequestMapping("/topics")
+    public List<Topic> getAllTopics()
+    {
+        return topicService.getAllTopics();
+    }
+
     @RequestMapping("/topics/{id}")
     public Topic getTopic(@PathVariable String id)
     {
@@ -210,6 +231,8 @@ public class TopicController
     {
         topicService.deleteTopic(id);
     }
+
+}
 ```
 
 # Database Connections
