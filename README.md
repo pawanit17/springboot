@@ -181,6 +181,9 @@ public class TopicController
 # SpringBoot REST API
 - You start by creating a Spring project.
   - So there would be a class annotated by **@SpringApplication**
+  - Define Controller classes **@RestController** which Spring would use for mapping URL requests to API calls
+  - Create API calls and map them to URIs using **@RequestMapping** annotations
+  - Business services can be created to hold the singleton data using **@Service** and can be used in the controller methods. 
 - 	
 
 # Database Connections
