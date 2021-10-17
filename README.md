@@ -147,9 +147,14 @@ Having Tomcat server embedded has the following advantages:
 
 # Annotations
 
-@SpringBootApplication
-@RestController
-@RequestMapping("/topics")
+| Name      | Description |
+| ----------- | ----------- |
+|@SpringBootApplication | Marks the application as a Spring Boot application.|
+|@RestController | Marks the class as a Rest Controller.|
+|@RequestMapping("/topics") | Marks the method to receive GET requests over /topics endpoint.|
+|@RequestMapping(value="/topics", method=RequestMethod.POST) | Marks the method to receive POST requests over /topics endpoint.|
+|@Value("${app.name}") | Used to retrieving key-value pairs in application.properties file. Will only work on Spring Managed Beans.|
+|@ComponentScan({"com.example.controller", "com.example.service"})|
 
 # Application.properties
 - A configuration point for a Spring application.
