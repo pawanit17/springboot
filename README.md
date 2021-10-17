@@ -13,6 +13,8 @@
 - Configuration / Auto Configuration
 - Spring Database connections
 - Controller vs Rest Controller
+  - @Controller is used in legacy systems which use JSPs. it can return views. @RestController is to mark the controller is providing REST services with JSON response type. so it wraps @Controller and @ResponseBody annotations together.
+  - https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation
 - Dependency Injection
 - Inversion of Control
 - What to do if someone needs XML instead of JSON output?.
@@ -154,7 +156,20 @@ Having Tomcat server embedded has the following advantages:
 |@RequestMapping("/topics") | Marks the method to receive GET requests over /topics endpoint.|
 |@RequestMapping(value="/topics", method=RequestMethod.POST) | Marks the method to receive POST requests over /topics endpoint.|
 |@Value("${app.name}") | Used to retrieving key-value pairs in application.properties file. Will only work on Spring Managed Beans.|
-|@ComponentScan({"com.example.controller", "com.example.service"})|
+|@ComponentScan({"com.example.controller", "com.example.service"})||
+|@EntityScan ||
+|@Repository ||
+|@JsonIgnore | Used to ensure that a property in a class does not get serialized into JSON |
+|@JsonProperty("first_name") | Used to update the key that is used in the generated JSON file. By default, the key is camel case of property name. |
+|@Getter, @Setter, @Data | Used in Project LOMBOK to simply the code by eliminating getters and setters and only use Annotations. |
+|@AllArgsConstructor, @NoArgsConstructor | Used in Project LOMBOK to add in the constructors. Simplifies the code, especially for POJO classes. |
+|@Column(name = "first_name" ) | Used to map Class Attribute to RDBMS table column. |
+|@Id | To represent the primary key |
+|@GeneratedValue | For auto-increment, decrement columns |
+|@Repository | An interface that holds API to connect to databases |
+|@Entity | Each table in db, we would have one class |
+|@Service | All the business logic comes here - REST, CRUD invocations etc. |
+
 
 # Application.properties
 - A configuration point for a Spring application.
@@ -172,6 +187,7 @@ Having Tomcat server embedded has the following advantages:
 # Examples
 - The below code depicts a RestController that maps /topics URI to getAllTopics() method.
 - The return value of that method gets serialzied into JSON content. This is handled for us by SpringMVC.
+- Spring uses Jackson library for Object to JSON serialization and de-serialization.
 
 ```
 package io.firehose.springbootstarter.io.firehose.springbootstarter.topic;
@@ -197,7 +213,7 @@ public class TopicController
 }
 ```
 
-- When localhost:8080/topics is hit, the result would be that this getAllTopics would be hit and its response would be marked as the return JSON.
+- When localhost:8080/topics is hit, the result would be that this getAllTopics would be hit and its response would be serialized onto JSON.
 ```
 [{"id":"Spring","name":"Spring Framework","description":"Stable Microservices"},{"id":"Cassandra","name":"Distributed Database","description":"Highavailable Fast Database"},{"id":"Redis","name":"Caching Service","description":"Performance Booster"}]
 ```
@@ -261,6 +277,20 @@ public class TopicController
 }
 ```
 
+# Project LOMBOK
+- Used to avoid boilerplate code.
+- Getters, Setters and Constructors are removed and appropriate annotations are marked at the class level or at the attribute level.
+- LOMBOK is a jar file that can be used outside of Spring Framework as well.
 
-# Database Connections
-- JPA is Java Persistance Architecture, which is a specification. Spring Data JPA is the Spring implementation of the same.
+# JPA
+- JPA is Java Persistance API, which is a specification. Spring Data JPA is the Spring implementation of the same.
+- ORM - Java Class mapped to RDBMS Table, Class Attributes to Columns and Class instances to rows. Hibernate is one such ORM implementation.
+- Hibernate / JPA abstract vendor lockin / direct dependency and you are free to move to a different Database.
+- JPQL are database independent queries.
+- JPARepository is a combination of CrudRepository and PagingAndSortingRepository.
+
+
+Entity classes,
+Service classes,
+Response classes,
+Repository classes.
