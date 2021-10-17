@@ -36,6 +36,7 @@
 - SpringBoot Kafka ElasticSearch https://wipro.udemy.com/course/event-driven-microservices-spring-boot-kafka-and-elasticsearch/
 - https://spring.io/guides/gs/accessing-data-mysql/
 - https://spring.io/guides/gs/relational-data-access/
+- Jaeger Distributed Tracing https://wipro.udemy.com/course/jaeger-distributed-tracing-for-cloud-native-applications/
 
 
 
