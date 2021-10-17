@@ -37,7 +37,13 @@
 - https://spring.io/guides/gs/accessing-data-mysql/
 - https://spring.io/guides/gs/relational-data-access/
 - Jaeger Distributed Tracing https://wipro.udemy.com/course/jaeger-distributed-tracing-for-cloud-native-applications/
-
+## Order
+- https://wipro.udemy.com/course/restful-web-services-with-spring-framework-a-quick-start/
+- https://wipro.udemy.com/course/microservices-rest-apis-using-spring-data-rest/
+- https://wipro.udemy.com/course/microservices-with-java-spring-boot-spring-cloud-eureka-api-gateway/
+- https://wipro.udemy.com/course/mongodb-with-spring-boot-spring-data-mongorepository-mlab-cloudfoundry/
+- https://wipro.udemy.com/course/jaeger-distributed-tracing-for-cloud-native-applications/
+- 
 
 
 # Problems with Spring
